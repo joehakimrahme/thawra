@@ -3,9 +3,9 @@ AUTHORS
 ChangeLog
 LICENSE
 README.rst
-requirements.txt
 setup.cfg
 setup.py
+test-requirements.txt
 tox.ini
 thawra/__init__.py
 thawra/action.py

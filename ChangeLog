@@ -1,3 +1,15 @@
+commit 0a0e55e999b4abc506cd92ac2d9420da74b3b969
+Author: Joe H. Rahme <joehakimrahme@gmail.com>
+Date:   Sat Mar 8 20:06:48 2014 +0100
+
+    Adds tox as a test-requirement
+
+commit 4a42c05afc410efb7c973b2c43ee986cdc68e39e
+Author: Joe H. Rahme <joehakimrahme@gmail.com>
+Date:   Sat Mar 8 20:04:09 2014 +0100
+
+    Inserts header files
+
 commit f0e264fcb38cfd8fc56eab04691a1af7d4696701
 Author: Joe H. Rahme <joehakimrahme@gmail.com>
 Date:   Sat Mar 8 20:01:17 2014 +0100
