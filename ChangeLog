@@ -1,3 +1,9 @@
+commit f0e264fcb38cfd8fc56eab04691a1af7d4696701
+Author: Joe H. Rahme <joehakimrahme@gmail.com>
+Date:   Sat Mar 8 20:01:17 2014 +0100
+
+    Adds a .travis.yml file for Travis CI
+
 commit b8050b300820b13f6ffe5271faa333b2153a2507
 Author: Joe H. Rahme <joehakimrahme@gmail.com>
 Date:   Sat Mar 8 19:55:16 2014 +0100
