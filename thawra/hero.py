@@ -1,5 +1,6 @@
 from thawra import action
 
+
 class InvalidHero(Exception):
     def __init__(self, msg, value):
         self.value = value
@@ -21,14 +22,14 @@ class Hero(object):
         if len(attributes) != 3 or \
            not all(map(lambda x: isinstance(x, int), attributes)):
             raise InvalidHero(
-                "Expected array of 3 integers for attributes, got: %s" % attributes,
-                attributes)
+                "Expected array of 3 integers for attributes, got: %s" %
+                attributes, attributes)
         self.attributes = dict(zip(('str', 'int', 'agi'), attributes))
 
-        # TODO: validate skillmap input
+        # TODO(rahmu): validate skillmap input
         self.skillmap = skillmap
 
-        # TODO: validate macros input
+        # TODO(rahmu): validate macros input
         self.macros = macros
 
         self.status = None
@@ -46,10 +47,11 @@ class Hero(object):
         self._hp = self.maxHP
         self._mp = self.maxMP
 
-        # TODO: fill the rest of the dict with the skills
+        # TODO(rahmu): fill the rest of the dict with the skills
         self.actions = {
             'ATK': lambda target: action.Action(self, 'ATK', target, 0),
-            'MAG': lambda target: action.Action(self, 'MAG', target, self.maxMP / 15)
+            'MAG': lambda target: action.Action(self, 'MAG', target,
+                                                self.maxMP / 15)
         }
 
     @property
@@ -92,10 +94,10 @@ class Hero(object):
             value > self.maxHP: self.maxHP,
             value < 0: 0}
 
-
         self._mp = switch[True]
 
     def _get_level(self):
-        #TODO: it should be a max between this and the highest skill
-        #TODO: it should raise an InvalidHero exception in case of a problem
-        return sum(self.attributes.values()) / 10
+        #TODO(rahmu): it should be a max between this and the highest skill
+        #TODO(rahmu): it should raise an InvalidHero exception in case of a
+        #problem
+        return int(sum(self.attributes.values()) / 10)

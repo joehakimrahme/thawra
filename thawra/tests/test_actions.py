@@ -1,14 +1,14 @@
 import unittest
 
-from thawra.hero import Hero
-from thawra.action import Action
+from thawra import hero
+
 
 class ActionTest(unittest.TestCase):
 
     def setUp(self):
-        self.h1 = Hero("", "", (8, 8, 3), "fire", None)
-        self.h2 = Hero("", "", (7, 2, 10), "fire", None)
-        self.h3 = Hero("", "", (4, 5, 10), "fire", None)
+        self.h1 = hero.Hero("", "", (8, 8, 3), "fire", None)
+        self.h2 = hero.Hero("", "", (7, 2, 10), "fire", None)
+        self.h3 = hero.Hero("", "", (4, 5, 10), "fire", None)
 
     def test_attack(self):
         self.h1.actions['ATK']([self.h2])("")

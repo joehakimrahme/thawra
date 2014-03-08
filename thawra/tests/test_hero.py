@@ -2,6 +2,7 @@ import unittest
 
 from thawra import hero
 
+
 class HeroTest(unittest.TestCase):
 
     def setUp(self):
@@ -17,7 +18,6 @@ class HeroTest(unittest.TestCase):
         self.assertEqual(self.hero.agility, 3)
 
     def test_level(self):
-        print self.hero.attributes
         self.assertEqual(self.hero.level, 1)
 
     def test_hero_maxHP(self):

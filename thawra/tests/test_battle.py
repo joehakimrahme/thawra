@@ -1,6 +1,5 @@
 import unittest
 
-from thawra import action
 from thawra import battle
 from thawra import hero
 
@@ -19,7 +18,6 @@ class BattleTest(unittest.TestCase):
         self.team2 = (self.hero21, self.hero22, self.hero23)
 
         self.battle = battle.Battle((self.team1, self.team2), "fire")
-
 
     def test_dead_or_alive(self):
         dead, alive = self.battle._dead_or_alive()
