@@ -1,0 +1,16 @@
+AUTHORS
+ChangeLog
+README.rst
+setup.cfg
+setup.py
+thawra/__init__.py
+thawra/action.py
+thawra/battle.py
+thawra/hero.py
+thawra.egg-info/PKG-INFO
+thawra.egg-info/SOURCES.txt
+thawra.egg-info/dependency_links.txt
+thawra.egg-info/entry_points.txt
+thawra.egg-info/not-zip-safe
+thawra.egg-info/requires.txt
+thawra.egg-info/top_level.txt
