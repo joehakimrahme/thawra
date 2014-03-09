@@ -16,7 +16,6 @@ thawra.egg-info/SOURCES.txt
 thawra.egg-info/dependency_links.txt
 thawra.egg-info/entry_points.txt
 thawra.egg-info/not-zip-safe
-thawra.egg-info/requires.txt
 thawra.egg-info/top_level.txt
 thawra/tests/test_actions.py
 thawra/tests/test_battle.py

@@ -22,7 +22,7 @@ class HeroTest(unittest.TestCase):
                               skillmap="",
                               attributes=[8, 8, 3],
                               element="fire",
-                              macros=None)
+                              macros=hero.randattack)
 
     def test_attributes(self):
         self.assertEqual(self.hero.strength, 8)
@@ -56,6 +56,15 @@ class HeroTest(unittest.TestCase):
     def test_invalid_attributes(self):
         self.assertRaises(hero.InvalidHero, hero.Hero,
                           "", "", [10], "", None)
+
+    def test_choice(self):
+        """This test should be renamed test_randattack gambit.
+        Or something.
+
+        """
+        choice, target = self.hero.choice([self.hero], [self.hero])
+        self.assertEqual(choice, "ATK")
+        self.assertEqual(target, [self.hero])
 
 if __name__ == "__main__":
     unittest.main()

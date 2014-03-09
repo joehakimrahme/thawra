@@ -10,6 +10,7 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
+import random
 import unittest
 
 from thawra import hero
@@ -18,9 +19,9 @@ from thawra import hero
 class ActionTest(unittest.TestCase):
 
     def setUp(self):
-        self.h1 = hero.Hero("", "", (8, 8, 3), "fire", None)
-        self.h2 = hero.Hero("", "", (7, 2, 10), "fire", None)
-        self.h3 = hero.Hero("", "", (4, 5, 10), "fire", None)
+        self.h1 = hero.Hero("H1", "", (8, 8, 3), "fire", None)
+        self.h2 = hero.Hero("H2", "", (7, 2, 10), "fire", None)
+        self.h3 = hero.Hero("H3", "", (4, 5, 10), "fire", None)
 
     def test_attack(self):
         self.h1.actions['ATK']([self.h2])("")

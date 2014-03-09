@@ -10,6 +10,8 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
+import random
+
 from thawra import action
 
 
@@ -17,6 +19,7 @@ class InvalidHero(Exception):
     def __init__(self, msg, value):
         self.value = value
         self.msg = msg
+        super(InvalidHero, self).__init__()
 
     def __str__(self):
         return self.msg
@@ -113,3 +116,11 @@ class Hero(object):
         #TODO(rahmu): it should raise an InvalidHero exception in case of a
         #problem
         return int(sum(self.attributes.values()) / 10)
+
+    def choice(self, allies, enemies):
+        if self.macros:
+            return self.macros(allies, enemies)
+
+
+def randattack(allies, enemies):
+        return 'ATK', [random.choice(filter(lambda h: h.hp > 0, enemies))]

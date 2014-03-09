@@ -1,3 +1,21 @@
+commit 3b28ebf58f8d48ffecfe244b0afe280ec7454eee
+Author: Joe H. Rahme <joehakimrahme@gmail.com>
+Date:   Sat Mar 8 20:24:46 2014 +0100
+
+    Inserts Travis CI icon in the README file
+
+commit 8ca0f3cb744c60d55ea1cce51cfa7417b2dbfc2a
+Author: Joe H. Rahme <joehakimrahme@gmail.com>
+Date:   Sat Mar 8 20:18:46 2014 +0100
+
+    Updates travis file to take tox into account
+
+commit 4775b1f7c17e58f69eb13b6a091c5a1799d2e56c
+Author: Joe H. Rahme <joehakimrahme@gmail.com>
+Date:   Sat Mar 8 20:10:00 2014 +0100
+
+    Removes support for py33 in tox tests
+
 commit 0a0e55e999b4abc506cd92ac2d9420da74b3b969
 Author: Joe H. Rahme <joehakimrahme@gmail.com>
 Date:   Sat Mar 8 20:06:48 2014 +0100

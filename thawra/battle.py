@@ -21,12 +21,27 @@ class Battle(object):
         self.weather = weather
         self.log = []  # Later
 
-        @property
-        def heroes(self):
-            reduce(operator.add, self.teams)
+    #TODO(rahmu): Does it really need to be a property?
+    @property
+    def action_choices(self):
+        self._action_choices = {}
+        for hero in self.heroes:
+            self._action_choices[hero] = {
+                'ATK': hero.actions['ATK'],
+                'MAG': hero.actions['MAG'],
+            }
+            # TODO(rahmu): Fill the rest with the skillmap
 
-    def _other_teams(self, team):
-        return [t for t in self.teams if t is not team]
+        return self._action_choices
+
+    @property
+    def heroes(self):
+        return reduce(operator.add, self.teams)
+
+    def enemies(self, team):
+        return reduce(operator.add,
+                      filter(lambda x: x is not team, self.teams),
+                      [])
 
     def _dead_or_alive(self):
         dead = []
@@ -42,10 +57,11 @@ class Battle(object):
 
     def select_next_hero(self):
         nextround = []
-        for hero in self.teams[0] + self.teams[1]:
-            if hero.hp > 0:
-                for _ in range(hero.stats['SPD']):
-                    nextround.append(hero)
+        for team in self.teams:
+            for hero in team:
+                if hero.hp > 0:
+                    for _ in range(hero.stats['SPD']):
+                        nextround.append((hero, team))
 
         return random.choice(nextround)
 
@@ -56,4 +72,8 @@ class Battle(object):
                 break  # cleanup actions: winners, fill stats, ...
 
             actor, actor_team = self.select_next_hero()
-            # actor_choice = self.get_choice(actor, actor_team)
+            actor_choice, actor_target = actor.choice(
+                actor_team, self.enemies(actor_team))
+
+            actor_action = self.action_choices[actor][actor_choice]
+            actor_action(actor_target)(self.weather)
