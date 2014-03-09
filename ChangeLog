@@ -1,61 +1,13 @@
-commit 3b28ebf58f8d48ffecfe244b0afe280ec7454eee
-Author: Joe H. Rahme <joehakimrahme@gmail.com>
-Date:   Sat Mar 8 20:24:46 2014 +0100
+CHANGES
+=======
 
-    Inserts Travis CI icon in the README file
-
-commit 8ca0f3cb744c60d55ea1cce51cfa7417b2dbfc2a
-Author: Joe H. Rahme <joehakimrahme@gmail.com>
-Date:   Sat Mar 8 20:18:46 2014 +0100
-
-    Updates travis file to take tox into account
-
-commit 4775b1f7c17e58f69eb13b6a091c5a1799d2e56c
-Author: Joe H. Rahme <joehakimrahme@gmail.com>
-Date:   Sat Mar 8 20:10:00 2014 +0100
-
-    Removes support for py33 in tox tests
-
-commit 0a0e55e999b4abc506cd92ac2d9420da74b3b969
-Author: Joe H. Rahme <joehakimrahme@gmail.com>
-Date:   Sat Mar 8 20:06:48 2014 +0100
-
-    Adds tox as a test-requirement
-
-commit 4a42c05afc410efb7c973b2c43ee986cdc68e39e
-Author: Joe H. Rahme <joehakimrahme@gmail.com>
-Date:   Sat Mar 8 20:04:09 2014 +0100
-
-    Inserts header files
-
-commit f0e264fcb38cfd8fc56eab04691a1af7d4696701
-Author: Joe H. Rahme <joehakimrahme@gmail.com>
-Date:   Sat Mar 8 20:01:17 2014 +0100
-
-    Adds a .travis.yml file for Travis CI
-
-commit b8050b300820b13f6ffe5271faa333b2153a2507
-Author: Joe H. Rahme <joehakimrahme@gmail.com>
-Date:   Sat Mar 8 19:55:16 2014 +0100
-
-    Adds Apache license
-
-commit 8331934053ed52694e486ebe25f175ed1d2776c6
-Author: Joe H. Rahme <joehakimrahme@gmail.com>
-Date:   Sat Mar 8 19:49:27 2014 +0100
-
-    Initial commit
-    
-    This is a basic skeleton for the app:
-    - packaging done with pbr
-    - testing done through tox and nose
-    - 14 unit tests
-    - style checking done with hacking
-    - basic model for a hero
-    - an incomplete battle system
-
-commit 575eec547f23a738f212e34c9e42e9a3f4ec0a22
-Author: Joe H. Rahme <joehakimrahme@gmail.com>
-Date:   Sat Mar 8 19:34:56 2014 +0100
-
-    Initial Commit
+* Completes the basic battle loop
+* Inserts Travis CI icon in the README file
+* Updates travis file to take tox into account
+* Removes support for py33 in tox tests
+* Adds tox as a test-requirement
+* Inserts header files
+* Adds a .travis.yml file for Travis CI
+* Adds Apache license
+* Initial commit
+* Initial Commit
