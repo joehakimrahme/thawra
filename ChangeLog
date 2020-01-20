@@ -1,6 +1,8 @@
 CHANGES
 =======
 
+* Adds py3 support
+* Fixes flake8 issues
 * Completes the basic battle loop
 * Inserts Travis CI icon in the README file
 * Updates travis file to take tox into account

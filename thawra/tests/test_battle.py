@@ -49,6 +49,7 @@ class BattleTest(unittest.TestCase):
 
     def test_battle_loop(self):
         """Tests that the a pure randomattack battle ends.
+
         """
         self.battle.battle_loop()
         dead, alive = self.battle._dead_or_alive()

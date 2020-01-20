@@ -1,5 +1,5 @@
 [thawra]
-battle = thawra.battle
 action = tahwra.action
+battle = thawra.battle
 hero = thawra.hero
 

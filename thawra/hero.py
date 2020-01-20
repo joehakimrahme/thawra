@@ -112,9 +112,9 @@ class Hero(object):
         self._mp = switch[True]
 
     def _get_level(self):
-        #TODO(rahmu): it should be a max between this and the highest skill
-        #TODO(rahmu): it should raise an InvalidHero exception in case of a
-        #problem
+        # TODO(rahmu): it should be a max between this and the highest skill
+        # TODO(rahmu): it should raise an InvalidHero exception in case of a
+        # problem
         return int(sum(self.attributes.values()) / 10)
 
     def choice(self, allies, enemies):
@@ -123,4 +123,4 @@ class Hero(object):
 
 
 def randattack(allies, enemies):
-        return 'ATK', [random.choice(filter(lambda h: h.hp > 0, enemies))]
+    return 'ATK', [random.choice([h for h in enemies if h.hp > 0])]

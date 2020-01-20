@@ -59,12 +59,13 @@ class HeroTest(unittest.TestCase):
 
     def test_choice(self):
         """This test should be renamed test_randattack gambit.
-        Or something.
 
+        Or something.
         """
         choice, target = self.hero.choice([self.hero], [self.hero])
         self.assertEqual(choice, "ATK")
         self.assertEqual(target, [self.hero])
+
 
 if __name__ == "__main__":
     unittest.main()
